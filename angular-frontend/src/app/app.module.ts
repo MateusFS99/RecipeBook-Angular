@@ -5,16 +5,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReceitasComponent } from './receitas/receitas.component';
 import { IngredientesComponent } from './ingredientes/ingredientes.component';
+import { NavComponent } from './shared/nav/nav.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
       ReceitasComponent,
-      IngredientesComponent
+      IngredientesComponent,
+      NavComponent
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BsDropdownModule.forRoot(),
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

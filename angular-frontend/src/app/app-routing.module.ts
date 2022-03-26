@@ -4,6 +4,7 @@ import { IngredientesComponent } from './ingredientes/ingredientes.component';
 import { ReceitasComponent } from './receitas/receitas.component';
 
 const routes: Routes = [
+    { path: '', redirectTo: 'receitas', pathMatch: 'full' },
     { path: 'receitas', component: ReceitasComponent },
     { path: 'ingredientes', component: IngredientesComponent }
 ];
