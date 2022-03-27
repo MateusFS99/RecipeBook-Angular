@@ -9,9 +9,9 @@ import { Ingrediente } from '../models/Ingrediente';
 })
 export class IngredientesComponent implements OnInit {
 
+    public titulo = 'Ingredientes';
     public ingredienteForm!: FormGroup;
     public ingredienteSelected!: Ingrediente | null;
-    public titulo = 'Ingredientes';
     public ingredientes = [
 
         { id: 1, nome: 'Farinha' },
