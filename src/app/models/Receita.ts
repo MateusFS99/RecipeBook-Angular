@@ -2,8 +2,8 @@ import { Ingrediente } from './Ingrediente';
 
 export class Receita {
 
-    id!: number;
-    titulo!: string;
-    instrucoes!: string;
-    ingredientes!: Ingrediente[];
+    id: number;
+    titulo: string;
+    instrucoes: string;
+    ingredientes: Ingrediente[];
 }

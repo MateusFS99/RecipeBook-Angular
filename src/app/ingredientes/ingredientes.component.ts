@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Ingrediente } from '../models/Ingrediente';
+import { IngredienteService } from './ingrediente.service';
 
 @Component({
     selector: 'app-ingredientes',
@@ -10,29 +11,40 @@ import { Ingrediente } from '../models/Ingrediente';
 export class IngredientesComponent implements OnInit {
 
     public titulo = 'Ingredientes';
-    public ingredienteForm!: FormGroup;
-    public ingredienteSelected!: Ingrediente | null;
-    public ingredientes = [
+    public ingredienteForm: FormGroup;
+    public ingredienteSelected: Ingrediente | null;
+    public ingredientes: Ingrediente[];
 
-        { id: 1, nome: 'Farinha' },
-        { id: 2, nome: 'Fermento' },
-        { id: 3, nome: 'Achocolatado' },
-        { id: 4, nome: 'Leite' },
-        { id: 5, nome: 'Tomate' },
-        { id: 6, nome: 'Sal' },
-    ];
-
-    constructor(private fb: FormBuilder) {
+    constructor(private fb: FormBuilder,
+        private ingredienteService: IngredienteService) {
 
         this.criarForm();
     }
 
     ngOnInit() {
+
+        this.loadIngredientes();
+    }
+
+    loadIngredientes() {
+
+        this.ingredienteService.getAll().subscribe(
+
+            (ingredientes: Ingrediente[]) => {
+
+                this.ingredientes = ingredientes;
+            },
+            (error: any) => {
+
+                console.error(error);
+            }
+        );
     }
 
     ingredienteSelect(ingrediente: Ingrediente) {
 
         this.ingredienteSelected = ingrediente;
+        this.ingredienteForm.patchValue(ingrediente);
     }
 
     criarForm() {
