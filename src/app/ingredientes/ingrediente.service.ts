@@ -23,4 +23,19 @@ export class IngredienteService {
 
         return this.http.get<Ingrediente>(`${this.baseURL}/${id}`);
     }
+
+    post(ingrediente: Ingrediente) {
+
+        return this.http.post(`${this.baseURL}`, ingrediente);
+    }
+
+    put(ingrediente: Ingrediente) {
+
+        return this.http.put(`${this.baseURL}/${ingrediente.id}`, ingrediente);
+    }
+
+    delete(id: number) {
+
+        return this.http.delete(`${this.baseURL}/${id}`);
+    }
 }
