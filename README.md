@@ -1,4 +1,6 @@
-# RecipeBook-Angular
+[![Updated Badge](https://badges.pufler.dev/updated/MateusFS99/RecipeBook-Angular)](https://github.com/MateusFS99/RecipeBook-Angular/commits/main)
+
+<h1 align="center">📖 Recipe Book - Angular Frontend 📖</h1>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
 
