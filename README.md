@@ -1,6 +1,6 @@
 [![Updated Badge](https://badges.pufler.dev/updated/MateusFS99/RecipeBook-Angular)](https://github.com/MateusFS99/RecipeBook-Angular/commits/main)
 
-<h1 align="center"><img src="src/assets/logo.png"> Recipe Book - Angular Frontend <img src="src/assets/logo.png"></h1>
+<h1 align="center"><img src="src/assets/logo.png" width="32" height="32"> Recipe Book - Angular Frontend <img src="src/assets/logo.png" width="32" height="32"></h1>
 
 ## About 🎯
 
@@ -10,6 +10,7 @@ Angular Frontend of the RecipeBook application, developed using ``Bootstrap`` an
 
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![JQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
