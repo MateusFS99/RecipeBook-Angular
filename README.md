@@ -1,16 +1,17 @@
 [![Updated Badge](https://badges.pufler.dev/updated/MateusFS99/RecipeBook-Angular)](https://github.com/MateusFS99/RecipeBook-Angular/commits/main)
 
-<h1 align="center">📖 Recipe Book - Angular Frontend 📖</h1>
+<h1 align="center"><img src="src/assets/logo.png"> Recipe Book - Angular Frontend <img src="src/assets/logo.png"></h1>
 
 ## About 🎯
 
-Angular Frontend of the RecipeBook application, developed using ``Bootstrap`` for better design.
+Angular Frontend of the RecipeBook application, developed using ``Bootstrap`` and ``JQuery`` for better design.
 
 ## Technologies 💻
 
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+![JQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)

@@ -37,7 +37,7 @@ export class ReceitasComponent implements OnInit {
 
         this.receitaForm = this.fb.group({
             id: [0],
-            nome: ['', Validators.required],
+            titulo: ['', Validators.required],
             instrucoes: ['', Validators.required]
         });
     }

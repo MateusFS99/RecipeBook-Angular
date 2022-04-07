@@ -11,7 +11,7 @@
             </div>
             <div class="form-group">
                 <hr>
-                <button class="btn btn-success" [disabled]="!ingredienteForm.valid">Enviar</button>
+                <button class="btn btn-success" [disabled]="!ingredienteForm.valid">Salvar</button>
             </div>
         </form>
     </div>
@@ -26,14 +26,14 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Opções</th>
+                    <th scope="col" style="text-align: center;">Opções</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let ingrediente of ingredientes">
                     <td scope="row">{{ingrediente.id}}</td>
                     <td>{{ingrediente.nome}}</td>
-                    <td>
+                    <td align="center">
                         <div class="btn-group">
                             <button (click)="ingredienteSelect(ingrediente)" class="btn btn-sm btn-outline-primary"
                                 style="margin: 0 2px;">Editar</button>
