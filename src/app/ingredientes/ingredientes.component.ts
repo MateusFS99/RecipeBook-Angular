@@ -10,8 +10,9 @@ import { IngredienteService } from './ingrediente.service';
 })
 export class IngredientesComponent implements OnInit {
 
-    public titulo = 'Ingredientes';
+    public titulo: string = 'Ingredientes';
     public ingredienteForm: FormGroup;
+    public dtOptions: DataTables.Settings = {};
     public ingredienteSelected: Ingrediente;
     public ingredientes: Ingrediente[];
 
@@ -23,6 +24,11 @@ export class IngredientesComponent implements OnInit {
 
     ngOnInit() {
 
+        this.dtOptions = {
+            pagingType: 'full_numbers',
+            pageLength: 5,
+            processing: true
+        };
         this.loadIngredientes();
     }
 

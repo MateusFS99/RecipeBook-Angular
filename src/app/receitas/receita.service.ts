@@ -22,4 +22,19 @@ export class ReceitaService {
 
         return this.http.get<Receita>(`${this.baseURL}/${id}`);
     }
+
+    post(receita: Receita) {
+
+        return this.http.post(`${this.baseURL}`, receita);
+    }
+
+    put(receita: Receita) {
+
+        return this.http.put(`${this.baseURL}/${receita.id}`, receita);
+    }
+
+    delete(id: number) {
+
+        return this.http.delete(`${this.baseURL}/${id}`);
+    }
 }

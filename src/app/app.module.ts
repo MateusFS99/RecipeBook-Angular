@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { HttpClientModule } from '@angular/common/http'
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http'
         FormsModule,
         ReactiveFormsModule,
         ModalModule.forRoot(),
-        HttpClientModule
+        HttpClientModule,
+        DataTablesModule
     ],
     providers: [],
     bootstrap: [AppComponent]
