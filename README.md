@@ -1,6 +1,6 @@
 [![Updated Badge](https://badges.pufler.dev/updated/MateusFS99/RecipeBook-Angular)](https://github.com/MateusFS99/RecipeBook-Angular/commits/main)
 
-<h1 align="center"><img src="src/assets/logo.png" width="32" height="32"> Recipe Book - Angular Frontend <img src="src/assets/logo.png" width="32" height="32"></h1>
+<h1 align="center"><img src="src/assets/logo.png"> Recipe Book - Angular Frontend <img src="src/assets/logo.png"></h1>
 
 ## About 🎯
 
