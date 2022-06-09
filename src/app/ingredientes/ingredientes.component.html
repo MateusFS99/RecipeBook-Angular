@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-sm-6" *ngIf="ingredienteSelected">
         <br>
-        <h2>{{ingredienteSelected.id == 0 ? 'Novo Ingrediente' : 'Cód. Ingrediente: ' + ingredienteSelected.id}}</h2>
+        <h2>{{ingredienteSelected.id ? 'Cód. Ingrediente: ' + ingredienteSelected.id : 'Novo Ingrediente'}}</h2>
         <button class="btn btn-outline-danger" (click)="voltar()">Fechar</button>
         <form [formGroup]="ingredienteForm" (submit)="ingredienteSubmit()">
             <div class="form-group">

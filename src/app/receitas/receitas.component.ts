@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Receita } from '../models/Receita';
 import { ReceitaService } from './receita.service';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
     selector: 'app-receitas',
@@ -13,7 +14,6 @@ export class ReceitasComponent implements OnInit {
 
     public titulo: string = 'Receitas';
     public receitaForm: FormGroup;
-    public dtOptions: DataTables.Settings = {};
     public receitaSelected: Receita;
     public receitas: Receita[];
 
@@ -25,11 +25,6 @@ export class ReceitasComponent implements OnInit {
 
     ngOnInit() {
 
-        this.dtOptions = {
-            pagingType: 'full_numbers',
-            pageLength: 5,
-            processing: true
-        };
         this.loadReceitas();
     }
 
@@ -92,10 +87,8 @@ export class ReceitasComponent implements OnInit {
 
     salvarReceita(receita: Receita) {
 
-        var modo = 'post';
+        let modo = receita.id ? 'put' : 'post';
 
-        if (receita.id != 0)
-            modo = 'put';
         this.receitaService[modo](receita).subscribe(
             (model: Receita) => {
                 console.log(model);
@@ -111,5 +104,31 @@ export class ReceitasComponent implements OnInit {
     voltar() {
 
         this.receitaSelected = null;
+    }
+
+    customOptions: OwlOptions = {
+        
+        loop: true,
+        mouseDrag: false,
+        touchDrag: false,
+        pullDrag: false,
+        dots: false,
+        navSpeed: 600,
+        navText: ['&#8249', '&#8250;'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            400: {
+                items: 2
+            },
+            760: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        },
+        nav: true
     }
 }

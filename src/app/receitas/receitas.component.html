@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-sm-6" *ngIf="receitaSelected">
         <br>
-        <h2>{{receitaSelected.id == 0 ? 'Nova Receita' : 'Cód. Receita: ' + receitaSelected.id}}</h2>
+        <h2>{{receitaSelected.id ? 'Cód. Receita: ' + receitaSelected.id : 'Nova Receita'}}</h2>
         <button class="btn btn-outline-danger" (click)="voltar()">Fechar</button>
         <hr>
         <form [formGroup]="receitaForm" (submit)="receitaSubmit()">
@@ -26,33 +26,20 @@
         <h2>{{titulo}}</h2>
         <button class="btn btn-success" (click)="receitaNova()">Cadastrar Receita</button>
         <hr>
-        <table class="row-border hover" datatable [dtOptions]="dtOptions">
-            <thead class="thead-light">
-                <tr>
-                    <th scope="col" style="text-align: center;">Visualizar</th>
-                    <th scope="col">#</th>
-                    <th scope="col">Titulo</th>
-                    <th scope="col" style="text-align: center;">Opções</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let receita of receitas">
-                    <td align="center">
-                        <button (click)="receitaSelect(receita)"
-                            class="text-dark btn btn-sm btn-outline-warning">Detalhe</button>
-                    </td>
-                    <td scope="row">{{receita.id}}</td>
-                    <td>{{receita.titulo}}</td>
-                    <td align="center">
-                        <div class="btn-group">
-                            <button (click)="receitaSelect(receita)" class="btn btn-sm btn-outline-primary"
-                                style="margin: 0 2px;">Editar</button>
-                            <button (click)="receitaDelete(receita.id)" class="btn btn-sm btn-outline-danger"
-                                style="margin: 0 2px;">Excluir</button>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide *ngFor="let receita of receitas">
+                <div class="slide">
+                    <h3>{{receita.titulo}}</h3>
+                    <div class="btn-group">
+                        <button (click)="receitaSelect(receita)" class="text-dark btn btn-sm btn-outline-warning"
+                            style="margin: 0 2px;">Detalhe</button>
+                        <button (click)="receitaSelect(receita)" class="btn btn-sm btn-outline-primary"
+                            style="margin: 0 2px;">Editar</button>
+                        <button (click)="receitaDelete(receita.id)" class="btn btn-sm btn-outline-danger"
+                            style="margin: 0 2px;">Excluir</button>
+                    </div>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
     </div>
 </div>

@@ -24,12 +24,12 @@ export class IngredientesComponent implements OnInit {
 
     ngOnInit() {
 
+        this.loadIngredientes();
         this.dtOptions = {
             pagingType: 'full_numbers',
             pageLength: 5,
             processing: true
         };
-        this.loadIngredientes();
     }
 
     criarForm() {
@@ -90,10 +90,8 @@ export class IngredientesComponent implements OnInit {
 
     salvarIngrediente(ingrediente: Ingrediente) {
 
-        var modo = 'post';
+        let modo = ingrediente.id ? 'put' : 'post';
 
-        if (ingrediente.id != 0)
-            modo = 'put';
         this.ingredienteService[modo](ingrediente).subscribe(
             (model: Ingrediente) => {
                 console.log(model);
