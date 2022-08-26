@@ -1,5 +1,3 @@
-[![Updated Badge](https://badges.pufler.dev/updated/MateusFS99/RecipeBook-Angular)](https://github.com/MateusFS99/RecipeBook-Angular/commits/main)
-
 <h1 align="center">
     <img src="https://cdn-icons-png.flaticon.com/512/3565/3565418.png" width="32px" height="32px"> 
     Recipe Book - Angular Frontend 
@@ -44,6 +42,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## License 📝
+## License ®️
 
 [![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
